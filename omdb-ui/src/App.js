@@ -2,7 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import './App.css';
 import SearchPage from './pages/SearchPage/SearchPage';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/search" component={SearchPage} />
           <Route path="/details/:imdbID" component={DetailsPage} />
           <Route path="/" component={HomePage} />
+          <Redirect to = "/search"/>
         </Switch>
       </Router>
     </div>
